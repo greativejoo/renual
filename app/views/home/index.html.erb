@@ -1,0 +1,318 @@
+<style>
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #FFF;
+    background-color: #303030;
+
+}
+.section {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+a{
+   color: #272B2D;
+   text-decoration: blink;
+}
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+    border-radius: 0px;
+}
+.jumbotron {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+    color: inherit;
+    border: #8E8C8C solid 2px;
+    box-shadow: 10px 10px #D8D4D4;
+    background-color: #FFF;
+}
+.progress .progress-bar {
+    background: #D80000; 
+}
+.bg-primary {
+    color: #0C0C0C;
+    background-color: #FFF;
+}
+.btn, .btn-ghost, .btn-ghost-light, .btn-text, .btn-text-light, .btn-light{
+    background: #F5F5F5;
+    color: #3A3838;
+}
+.btn-primary{
+   border-color: #FFF; 
+}
+.page-title .subheading {
+    display: block;
+    margin: 20px 0 0 0;
+    font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 200;
+    color: #A09E9E;
+}
+</style>
+<body style='padding-top:50px'>
+<!--페이스북 시작 -->
+
+<!--페이스북 끝-->
+<p class="notice"></p>
+<p class="alret"></p>  
+<!--네비게이션바-->  
+  
+<!--네비 바 끝 -->
+        <header class="page-title pt-large pt-dark pt-plax-lg-dark" data-stellar-background-ratio="0.4">
+          <div class="container">
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <h1>My page</h1>
+                  <span class="subheading">사건 및 자신이 쓴 게시글을 관리할 수 있습니다.</span>
+                </div>
+              </div>
+
+            </div>
+        </header>
+<section class="container section">
+    <div id="setting" class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              <li id="linkProfile" class="active"><a href="#profile" data-toggle="tab">사건 관리</a></li>
+              <li id="linkChangePassword"><a href="#changePassword" data-toggle="tab">비밀번호 변경</a></li>
+              <li id="linkEmail"><a href="#confirmEmail" data-toggle="tab">이메일 인증 또는 변경</a></li>
+              <li id="linkUpgrade"><a href="#upgrade" data-toggle="tab">게시글 관리</a></li>
+            </ul><br>
+        </div>
+        
+        <div class="col-md-9"><div style="" class="tab-content">
+            <div id="profile" class="tab-pane fade in active">
+                <div class="jumbotron">
+                    <h2>안녕하세요 <img src="https://www.gravatar.com/avatar/6526611513f03b90152e79eb2872edfc?d=retro" alt="" class="profile_image"> <strong>Yo 미나유노 넌 너무 멋져 랩도잘하고</strong> 님,</h2><p>인증된 이메일 주소는 <strong>anjella6636@gmail.com</strong> 이며<br> 현재 <strong>1개의</strong> 사건이 진행중입니다.</p>
+                </div>
+                    
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h4>진행중인 사건</h4></div>
+                    <div class="panel-body">
+                          <!--만약 you_id가 비었다면 나타나지 않게. -->
+    
+                            
+                          <p><strong>인터넷 모욕</strong></p>
+                          <p><strong>피고소인 : </strong></p>
+                          <p><strong>상태 : 관할 경찰서(안암, 02-1234-5678) 접수 완료</strong></p>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                              <span class="sr-only">40% Complete (success)</span>
+                            </div>
+                          </div>
+                          <p><a class="btn btn-primary btn-lg" style="float:right"href="/sue/show/35" role="button">고소장 다시보기</a></p>
+                    </div>
+                </div><br>
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4>통계</h4></div>
+                  <div class="panel-body">
+                    <p><strong>고소미 수집 개수 : 1개</strong></p>
+                        <p class="bg-primary">1. 모욕자 : </p>
+                  </div>
+                </div>
+                <a href="#quit" data-toggle="tab" class="btn btn-link btn-quiet quit_oven">회원 탈퇴</a><br><br>
+                <div style="" class="tab-content">
+                  <div id="quit" class="panel panel-danger tab-pane fade">
+                    <button type="button" class="close">&times;</button>
+                    <div class="panel-heading">
+                      <h4>지난 <strong><span id='activeDate'></span> 동안</strong>의 모든 활동이 사라집니다.</h4>
+                    </div>
+                    <div class="panel-body">
+                      <div class="col-md-12">
+                        <h4>계정을 탈퇴하게 되면..</h4>
+                        <ul class="list-unstyled">
+                          <li>* 유저 계정정보가 모두 삭제됩니다.</li>
+                          <li>* 해당 계정으로 업로드된 이미지 데이터들이 모두 삭제됩니다.</li>
+                          <li>* 그동안 작업한 고소관련 정보들을 찾을 수 없습니다.</li>
+                        </ul>
+                        <hr>
+                        <h4>계속하려면 다음 정보를 입력해주세요</h4><br>
+                        <form id="quitForm" method="post" action="/users" class="col-md-8 button_to">
+                          <div class="form-group">
+                            <label for="email_quit">본인의 이메일 주소를 입력해주세요</label>
+                            <input id="email_quit" name="email_quit" type="email" placeholder="example@email.com"  pattern="" maxlength="64" class="form-control" value="anjella6636@gmail.com" readonly>
+                          </div>
+                                  
+                          <div class="form-group">
+                            <label for="password_quit">비밀번호</label>
+                            <input id="password_quit" name="pass_quit" type="password" placeholder=""  pattern="^[A-Za-z0-9`~!@#$%^&amp;*\(\)_\-\+={}\[\]\|:;&quot;'&lt;&gt;,.\?\/\\]{6,32}$" maxlength="32" class="form-control">
+                          </div>
+                                  
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="agreeToQuit" required>위 내용을 확인했으며 계정을 탈퇴하겠습니다</label>
+                          </div><hr>
+                                  
+                          <div class="text-left">
+                            <a href="javascript:;" class="btn btn-default never_mind">다시 생각해보겠습니다</a>&nbsp;&nbsp;
+                            <input type="submit" data-confirm="Are you sure?" value="네, 이제 그만 이용하겠습니다" class="btn btn-danger really_quit">
+                          </div><br>
+                          <input type="hidden" name="_method" value="delete" />
+                          <input type="hidden" name="authenticity_token" value="ya6w/arCrDVjpYbMsYqDQcRiMCh5zmSb5HwoDT/3t2VB9N2r68GZpjBsOOsWhuMWrRLTm3BY074zCwKALDkzmw==" />
+                        </form>
+                        <img src="https://t1.daumcdn.net/oven/web/542CF91F436B49002C" alt="" class="pull-right">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="upgrade" class="tab-pane fade">
+              <div class="panel panel-default">
+                <div class="panel-heading"><h4>내가 쓴 글</h4></div>
+                <div class="panel-body">
+                  <ul class="nav nav-tabs">
+                    <li role="presentation" class="active" data-toggle="tab"><a href="#qna">질문과 답변</a></li>
+                  </ul>
+                  <ol id="qna" class="breadcrumb" >
+                    <li><a href="#">제목: 안녕하세에ㅕ</a></li>
+                    <li>조회 수 : 23</a></li>
+                    <li class="active">댓글 수 : 0</li>
+                  </ol>
+                    <li><a href="#">제목: 시험용</a></li>
+                    <li>조회 수 : 9</a></li>
+                    <li class="active">댓글 수 : 1</li>
+                  </ol>
+                  <ul class="nav nav-tabs"><br><br><br>
+                    <li role="none" class="active" data-toggle="tab"><a href="#freeboard">해우소</a></li>
+                  </ul>
+                  <ol id="freeboard" class="breadcrumb">
+                    <li><a href="#">글제목 : 오늘 페이스북에서 고소미 먹인 썰 푼다</a></li>
+                    <li>조회수 : 120</a></li>
+                    <li class="active">댓글 수 : 3</li>
+                  </ol>
+                </div>
+              </div>
+              <script>
+              $(".guide_to_activate").on("click", function(){
+            	$('.active').removeClass('active');
+            	$('#linkEmail').addClass('active');
+              })
+              </script>
+            </div>
+              
+            <div id="confirmEmail" class="tab-pane fade">
+              <div class="panel panel-default">
+                <div class="panel-heading"><h4>이메일 인증 또는 변경</h4>
+                </div>
+                <div class="panel-body">
+                  <form id="emailForm" onsubmit="return false;" class="col-md-12">
+                    <div class="form-group has-feedback has-success">
+                      <label>인증된 이메일 주소</label>
+                      <input type="email" disabled value="anjella6636@gmail.com" class="form-control">
+                      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div><hr>
+                    <div class="form-group">
+                      <label for="emailInput">이메일 주소 인증받기</label>
+                      <div class="input-group">
+                        <input id="emailInput" type="email" placeholder="example@address.com" maxlength="64" required value="" class="form-control">
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-primary">인증메일 전송</button>
+                        </span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="changePassword" class="tab-pane fade">
+              <div class="panel panel-default">
+                <div class="panel-heading"><h4>내 계정 정보</h4></div>
+                <div class="panel-body">
+                  <form action="/main/nickup" method="post">
+                    <div class="form-group">
+                      <label for="usernameInput">유저 이름</label>
+                      <div class="input-group">
+                        <input id="user-nickname" name="nickname" type="text" placeholder="Username" required value="Yo 미나유노 넌 너무 멋져 랩도잘하고" maxlength="64" class="form-control">
+                        <span class="input-group-btn">
+                          <button id='bbbb' type="submit" class="btn btn-primary">닉네임 변경하기</button>
+                        </span>
+                      </div>
+                      <p class="help-block"><small>한 글자 이상의 사용자 이름을 입력해주세요</small></p>
+                    </div>
+                    <label for="usernameInput"> &nbsp;&nbsp;<span style="color:green"> [착한놈]</span> 클린지수 : 1234 게시글 수 :123 </label>
+                  </form>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading"><h4>비밀번호 변경</h4>
+              </div>
+              <div class="panel-body">
+                <div class="form-group field">
+                  <label for="user_current_password">기존 비밀번호</label>
+                  <input name="user[current_password]" autofocus="autofocus" id="user_current_password" type="password" placeholder="" required maxlength="32" pattern="^[A-Za-z0-9`~!@#$%^&amp;*\(\)_\-\+={}\[\]\|:;&quot;'&lt;&gt;,.\?\/\\]{6,32}$" class="form-control">
+                </div>
+                <div class="form-group field">
+                  <label for="user_password">새로운 비밀번호</label>
+                  <input autocomplete="off" name="user[password]" id="user_password" type="password" placeholder="" required maxlength="32" minlength="8" pattern="^[A-Za-z0-9`~!@#$%^&amp;*\(\)_\-\+={}\[\]\|:;&quot;'&lt;&gt;,.\?\/\\]{6,32}$" class="form-control">
+                  <p class="help-block">
+                    <small>8~32자의 영문 대/소문자,숫자,특수문자 혼용가능</small>
+                  </p>
+                </div>
+                <div class="form-group field">
+                  <label for="user_password_confirmation">새로운 비밀번호 확인</label>
+                  <input autocomplete="off" name="user[password_confirmation]" id="user_password_confirmation" type="password" placeholder="" required minlength="8" maxlength="32" pattern="^[A-Za-z0-9`~!@#$%^&amp;*\(\)_\-\+={}\[\]\|:;&quot;'&lt;&gt;,.\?\/\\]{6,32}$" class="form-control">
+                </div><br>
+                <div class="clearfix actions">
+                  <input type="submit" name="commit" value="비밀번호 변경" class="btn btn-success pull-right">
+                </div><br>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+		<div class="text-center" style="background:#f3f3f3">
+      <div class="container">
+       <div class="browser-support text-center" style="text-align:center">
+        <div data-scroll-reveal="enter from the bottom and move 30px">
+            
+            <div style="text-algin:center" data-href="https://www.facebook.com/ovenapp" data-layout="standard" data-action="like" data-share="true" data-show-faces="true" data-width="100" class="fb-like">
+            </div>
+        </div>
+   
+  </div>
+ 
+  </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">피드백&제휴문의</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/main/email_send" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">받는사람:</label>
+            <input type="text" name="receiver" readonly value="info@gosomi.com" class="form-control" id="recipient-name">
+          </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">보내는사람:</label>
+            <input type="text" name="giver" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">제목:</label>
+            <input type="text" name="title" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">내용:</label>
+            <textarea name="contents" class="form-control" id="message-text"></textarea>
+          </div>
+        
+      </div>
+              
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="submit" class="btn btn-primary">보내기</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>  
